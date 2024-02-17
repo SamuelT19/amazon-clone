@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import amazonLogo from "../../assets/amazon-logo.png";
+import usaFlag from "./src/assets/usa-flag.jpg";
 import { ImSearch } from "react-icons/im";
 import { FiShoppingCart } from "react-icons/fi";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -133,7 +134,7 @@ function Header() {
             </div>
             <div className={classes.hp3}>
               <div className={classes.language}>
-                <img src="/src/assets/usa-flag.jpg" alt="" />
+                <img src={usaFlag} alt="usa-flag" />
                 <span>EN</span>
                 <IoMdArrowDropdown />
               </div>
