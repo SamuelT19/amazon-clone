@@ -1,0 +1,90 @@
+.payment_container {
+    margin-bottom: 50px;
+}
+
+.flex {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    height: auto;
+    border-bottom: 2px rgb(248, 179, 51) solid;
+    padding: 40px;
+    margin-inline: 20px;
+}
+
+.flex h1 {
+    min-width: 40vw;
+    font-size: 20px;
+}
+
+.flex p {
+    font-weight: 600;
+}
+
+.total_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: aliceblue;
+}
+
+.total_items p {
+    font-size: 30px;
+    text-align: center;
+}
+
+.card_element {
+    height: 150px;
+    width: 350px;
+}
+
+.total_price>* {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.pay_btn {
+    background-color: #e9a019;
+    border: none;
+    border-radius: 5px;
+
+}
+
+.pay_btn div {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.pay_btn div p {
+    font-size: 20px;
+
+}
+
+.StripeElement .ElementsApp {
+    font-size: 16px;
+}
+
+.payment_done,
+.payment_failed {
+    display: flex;
+    gap: 10px;
+}
+
+.payment_done img,
+.payment_failed img {
+    width: 30px;
+}
+
+.payment_done p {
+    color: green;
+    font-size: 20px;
+}
+
+.payment_failed p {
+    color: red;
+    font-size: 20px;
+}

@@ -1,0 +1,54 @@
+.flex,
+.signinForm div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.signin {
+    width: 300px;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.signinForm div {
+    width: 100%;
+    align-items: flex-start;
+}
+
+.signinForm div input {
+    width: 100%;
+}
+
+.signinLogo {
+    width: 100px;
+    text-align: center;
+}
+
+.signinLogo img {
+    width: 100%;
+}
+
+.signin_btn{
+    margin-top: 10px;
+    width: 100%;
+    padding-block: 6px;
+    background-color: rgb(241, 171, 41);
+    border: none;
+    border-radius: 10px;
+}
+.signup_btn{
+    margin-top: 10px;
+        width: 100%;
+        padding-block: 6px;
+        background-color: rgb(192, 184, 170);
+        border: none;
+        border-radius: 10px;
+}

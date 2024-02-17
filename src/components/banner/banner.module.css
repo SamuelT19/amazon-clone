@@ -1,0 +1,13 @@
+.banner_container{
+    position: relative;
+}
+.gradient {
+    position: absolute;
+    height: 35%;
+    width: 100%;
+    top:66%;
+    background: linear-gradient(to top,
+            #E3E6E6,
+            transparent);
+    z-index: 1;
+}

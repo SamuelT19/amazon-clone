@@ -1,0 +1,15 @@
+.singleProduct_container{
+    display: flex;
+    width: 75vw;
+    gap: 5vw;
+padding: 20px;
+}
+
+.image img{
+    height: 250px;
+        width: 250px;
+}
+.texts h2{
+color: rgb(224, 62, 21);
+padding-bottom: 15px;
+}
