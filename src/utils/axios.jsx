@@ -5,6 +5,6 @@ export const base = axios.create({
 });
 
 export const functionAxios = axios.create({
-  // baseURL: `https://amazon-api-mx0h.onrender.com`
-  baseURL:`http://localhost:4444/`
+  baseURL: `https://amazon-api-mx0h.onrender.com`
+  // baseURL:`http://localhost:4444/`
 });
