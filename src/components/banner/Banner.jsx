@@ -10,7 +10,7 @@ function Banner() {
     <>
       <div className={classes.banner_container}>
         <Carousel
-          autoPlay={false}
+          autoPlay={true}
           infiniteLoop={true}
           showIndicators={false}
           showThumbs={false}
