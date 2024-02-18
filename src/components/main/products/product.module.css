@@ -54,6 +54,22 @@ a {
     font-size: 20px;
 }
 
+/* ============Category================ */
+
+.category_header {
+    height: 70px;
+    display: flex;
+    align-items: end;
+    margin-bottom: 20px;
+    padding-left: 30px;
+    background-color: aliceblue;
+}
+
+.category_header h1 {
+    font-size: 22px;
+
+}
+
 /*============= All products ==========*/
 
 .products_container {

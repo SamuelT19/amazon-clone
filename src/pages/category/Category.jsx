@@ -11,6 +11,7 @@ function Category() {
   const [loaded, setLoaded] = useState(false);
 
   const { categoryName } = useParams();
+  console.log(categoryName)
   useEffect(() => {
     (async () => {
       await base
@@ -31,11 +32,17 @@ function Category() {
   return (
     <>
       {loaded ? (
-        <div className={classes.products_container}>
+        <>
+        <div className={classes.category_header}>
+            <h1>CATEGORY/ {categoryName.toLocaleUpperCase()}</h1>
+          </div>
+            <div className={classes.products_container}>
           {category.map((i) => {
             return <SingleProduct key={i.id} product={i} />;
           })}
         </div>
+        </>
+          
       ) : (
         <LoadingSpinner />
       )}

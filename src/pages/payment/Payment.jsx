@@ -69,9 +69,11 @@ function Payment() {
           created: paymentIntent?.created,
         });
       setLoading(false);
-      emptyBasket();
       setpayStatus({ done: true, failed: false });
-      setTimeout(() => navigate("/orders"), 2000);
+      setTimeout(() => {
+        emptyBasket();
+        navigate("/orders");
+      }, 2000);
     } catch (error) {
       console.error(error);
       setLoading(false);
