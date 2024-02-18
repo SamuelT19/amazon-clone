@@ -9,6 +9,7 @@ a {
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 80%;
+    max-width: 1000px;
     margin: auto;
     gap: 30px;
     margin-top: -120px;
@@ -197,9 +198,11 @@ a {
         width: 85vw;
         border-bottom: 1px solid rgb(250, 194, 41);
     }
-.item_container{
-    margin-bottom: 0px;
-}
+
+    .item_container {
+        margin-bottom: 0px;
+    }
+
     .item_counter {
         right: 30px;
     }
