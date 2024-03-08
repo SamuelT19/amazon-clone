@@ -91,6 +91,7 @@ li {
 
 .hp2:focus-within {
   border: 2.5px solid #ee540c;
+  border-radius: 10px;
 }
 
 .hp2>* {
