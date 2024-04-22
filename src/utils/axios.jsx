@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const base = axios.create({
-  baseURL: `https://api.escuelajs.co/api/v1/`,
+  baseURL: `https://fakestoreapi.com`,
 });
 
 export const functionAxios = axios.create({
