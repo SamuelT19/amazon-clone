@@ -1,6 +1,6 @@
 export const  request = [
-    "/categories/2",
-    "/categories/1",
-    "/categories/3",
-    "/categories/4",
+    "/product/category/electronics",
+    "/product/category/jewelery",
+    "/product/category/men's clothing",
+    "/product/category/women's clothing",
   ];
