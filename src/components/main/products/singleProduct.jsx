@@ -14,7 +14,8 @@ function SingleProduct({
   noRating,
   noItems,
 }) {
-  const { id, title, description, rating, price, image } = product;
+  const { id, title, description, rating, price} = product;
+  const image = product.category.image;
   const [{ basket }, dispatch] = contextData();
 
   const cartAdd = () => {

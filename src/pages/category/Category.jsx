@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { base } from "../../utils/axios";
-import { useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { request } from "../../utils/requests";
 import classes from "../../components/main/products/product.module.css";
 import LoadingSpinner from "../LoadingSpinner";
@@ -9,40 +9,41 @@ import SingleProduct from "../../components/main/products/singleProduct";
 function Category() {
   const [category, setcategory] = useState([]);
   const [loaded, setLoaded] = useState(false);
+  const [categoryName, setCategoryName] = useState();
 
-  const { categoryName } = useParams();
-  console.log(categoryName)
+  const { categoryId } = useParams();
   useEffect(() => {
     (async () => {
       await base
-        .get(
-          `${request.filter((x) => x === `/products/category/${categoryName}`)}`
-        )
+        .get("/products")
         .then((res) => {
-          const catagoryItems = res.data;
+          const catagoryItems = res.data.filter(
+            (x) => x.category.id == categoryId
+          );
           setcategory(catagoryItems);
+          console.log(catagoryItems[0].category.name);
+          setCategoryName(catagoryItems[0].category.name);
           setLoaded(true);
         })
         .catch((error) => {
           console.error("error", error);
         });
     })();
-  }, [categoryName]);
+  }, [categoryId]);
 
   return (
     <>
       {loaded ? (
         <>
-        <div className={classes.category_header}>
+          <div className={classes.category_header}>
             <h1>CATEGORY/ {categoryName.toLocaleUpperCase()}</h1>
           </div>
-            <div className={classes.products_container}>
-          {category.map((i) => {
-            return <SingleProduct key={i.id} product={i} />;
-          })}
-        </div>
+          <div className={classes.products_container}>
+            {category.map((i) => {
+              return <SingleProduct key={i.id} product={i} />;
+            })}
+          </div>
         </>
-          
       ) : (
         <LoadingSpinner />
       )}

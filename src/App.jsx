@@ -77,7 +77,7 @@ function App() {
                 }
               />
               <Route
-                path="/products/category/:categoryName"
+                path="/categories/:categoryId"
                 element={<Category />}
               />
               <Route
