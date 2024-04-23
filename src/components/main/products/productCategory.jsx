@@ -26,7 +26,7 @@ function ProductCategory({ address }) {
           <div className={classes.title}>{cat.name} </div>
           <div className={classes.poster} key={cat.id} style={imageStyle}></div>
         </Link>
-        <Link href={address}>
+        <Link to={address}>
           <p>shop now</p>
         </Link>
       </div>

@@ -21,7 +21,6 @@ function Category() {
             (x) => x.category.id == categoryId
           );
           setcategory(catagoryItems);
-          console.log(catagoryItems[0].category.name);
           setCategoryName(catagoryItems[0].category.name);
           setLoaded(true);
         })

@@ -138,7 +138,7 @@ function Payment() {
                   </div>
                 )}
               </button>
-              <p style={{fontSize: '14px'}}># Use fake card number "4242 4242 4242 4242"</p>
+              <p style={{fontSize: '14px', fontStyle:"italic"}}># Use fake card number "4242 4242 4242 4242"</p>
               {payStatus.done && (
                 <div className={classes.payment_done}>
                   <img src={paymentDone} alt="payment done" />
