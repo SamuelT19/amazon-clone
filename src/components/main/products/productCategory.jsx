@@ -10,7 +10,8 @@ function ProductCategory({ address }) {
     (async () => {
       const catagoryUrl = await base.get(address);
       const c = catagoryUrl.data;
-      setCat(c);
+      const random = c[Math.floor(Math.random() * c.length)];
+      setCat(random);
     })().catch(console.error);
   }, []);
   const imageStyle = {
@@ -23,10 +24,10 @@ function ProductCategory({ address }) {
     <>
       <div className={classes.category}>
         <Link to={address}>
-          <div className={classes.title}>{cat.name} </div>
+          <div className={classes.title}>{cat.category} </div>
           <div className={classes.poster} key={cat.id} style={imageStyle}></div>
         </Link>
-        <Link to={address}>
+        <Link href={address}>
           <p>shop now</p>
         </Link>
       </div>
