@@ -9,26 +9,25 @@ import SingleProduct from "../../components/main/products/singleProduct";
 function Category() {
   const [category, setcategory] = useState([]);
   const [loaded, setLoaded] = useState(false);
-  const [categoryName, setCategoryName] = useState();
 
-  const { categoryId } = useParams();
+  const { categoryName } = useParams();
+  console.log(categoryName);
   useEffect(() => {
     (async () => {
       await base
-        .get("/products")
+        .get(
+          `${request.filter((x) => x === `/products/category/${categoryName}`)}`
+        )
         .then((res) => {
-          const catagoryItems = res.data.filter(
-            (x) => x.category.id == categoryId
-          );
+          const catagoryItems = res.data;
           setcategory(catagoryItems);
-          setCategoryName(catagoryItems[0].category.name);
           setLoaded(true);
         })
         .catch((error) => {
           console.error("error", error);
         });
     })();
-  }, [categoryId]);
+  }, [categoryName]);
 
   return (
     <>
