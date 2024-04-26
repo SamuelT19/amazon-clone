@@ -151,6 +151,9 @@ function Payment() {
                   <p style={{}}>Payment Failed</p>
                 </div>
               )}
+              <br />
+              <br />
+              <br />
             </div>
           </form>
         </div>
